@@ -264,4 +264,23 @@ public class Connect {
         return false;
 
     }
+    
+    //Contact funtions
+    public boolean saveContactComment(String userName, String email, String comments){
+        try{
+            
+            String query = "insert into contact(UserName,Email,Comments)"
+                    + " values('" + userName + "','" + email + "','" + comments + "')";
+            PreparedStatement pr = (PreparedStatement) con.prepareStatement(query);
+            System.out.println(query);
+            int create = pr.executeUpdate();
+            if (create > 0) {
+                con.commit();
+                return true;
+            } 
+        }catch(Exception ex){
+            ex.printStackTrace();
+        }
+        return false;
+    }
 }

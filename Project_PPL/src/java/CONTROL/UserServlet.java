@@ -46,12 +46,9 @@ public class UserServlet extends HttpServlet {
             String language = request.getParameter("Language");
             String role = request.getParameter("Role");
             int r = 0;
-if(role =="admin"){
-    r =1;
-}
-    
-            out.println(firstName + "-" + lastName + "-" + email + "-" + password + "-" + confirmPass + "-" + address + "-"
-                    + phone + "-" + gender + "-" + avatar + "-" + dateOfBirth + "-" + language + "-" + role);
+            if(role =="admin"){
+                r =1;
+            }
             boolean newAccount = con.createAccount(firstName, lastName, gender, email, password, phone, address, language, avatar, dateOfBirth, role, r);
             if(newAccount){
                 out.println("ok");
@@ -61,6 +58,7 @@ if(role =="admin"){
             }
 
         }
+        con.close();
     }
 
     @Override

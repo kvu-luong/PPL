@@ -7,6 +7,8 @@
         <link href="vendor/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="1.css" rel="stylesheet" type="text/css"/>
         <link href="vendor/font-awesome.css" rel="stylesheet" type="text/css"/>
+        <script src="vendor/jquery-3.3.1.min.js" type="text/javascript"></script>
+
     </head>
     <body >
         <!--Start Header -->
@@ -126,20 +128,37 @@
                         <p><span class="glyphicon glyphicon-phone"></span> +00 9999999999</p>
                         <p><span class="glyphicon glyphicon-envelope"></span> myemail@gmail.com</p>
                     </div>
+                    <% try {
+                            if (request.getAttribute("SendEmail").equals("ok")) {
+                    %>
+                    <script>
+                        alert("We will reply to you soon!");
+                    </script>
+                    <% } else {
+                    %>
+                    <script>
+                        alert("Please check your email address again!");
+                    </script>
+                    <%
+                            }
+                        } catch (Exception ex) {
+                            ex.printStackTrace();
+                        }
+                    %>
                     <div class="col-sm-7">
-                        <form action="/action_page.php">
+                        <form action="MailServlet" method="POST">
                             <div class="row">
                                 <div class="col-sm-6 form-group">
-                                    <input class="form-control" id="nameContact" name="name" placeholder="Name" type="text" required>
+                                    <input class="form-control" name="UserName" placeholder="Name" type="text" required>
                                 </div>
                                 <div class="col-sm-6 form-group">
-                                    <input class="form-control" id="Contact" name="email" placeholder="Email" type="email" required>
+                                    <input class="form-control" name="Email" placeholder="Email" type="email" required>
                                 </div>
                             </div>
-                            <textarea class="form-control" id="commentsContact" name="comments" placeholder="Comment" rows="5"></textarea><br>
+                            <textarea class="form-control"  name="Comments" placeholder="Comment" rows="5" required></textarea><br>
                             <div class="row">
                                 <div class="col-sm-12 form-group">
-                                    <button class="btn btn-default pull-right" type="submit">Send</button>
+                                    <input class="btn btn-default pull-right" name="action" value="Send" type="submit">
                                 </div>
                             </div>
                         </form> <!-- end form -->

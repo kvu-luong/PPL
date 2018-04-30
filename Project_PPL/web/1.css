@@ -118,10 +118,10 @@ a.btn.btn-default.nut-contact:hover{
     background-image:url(img/service1.jpg);
 }
 .photo2{
-    background-image:url(img/service2.jpg);
+    background-image:url(img/service3.jpg);
 }
 .photo3{
-    background-image:url(img/service3.jpg);
+    background-image:url(img/service2.jpg);
 }
 .photo3:hover{
     box-shadow:none;

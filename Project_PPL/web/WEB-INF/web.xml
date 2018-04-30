@@ -4,9 +4,17 @@
         <servlet-name>User</servlet-name>
         <servlet-class>CONTROL.UserServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>MailServlet</servlet-name>
+        <servlet-class>CONTROL.MailServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>User</servlet-name>
         <url-pattern>/UserServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MailServlet</servlet-name>
+        <url-pattern>/MailServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
