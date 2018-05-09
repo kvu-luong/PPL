@@ -42,7 +42,7 @@
                         </li>
                         <li><a href="#">Patient</a></li>
                         <li><a href="#">Appointment</a></li>
-
+                   
 
                     </ul>
                     <form class="navbar-form navbar-left" role="search">
@@ -84,7 +84,7 @@
         <!-- End Welcome-slide -->
         <!-- 24/7 Service -->
         <div class="Service wow bounceInUp">
-            <div class="container-fluid">
+            <div class="container">
                 <div class="row">
                     <div class="col-sm-8 col-sm-push-2 text-center">
                         <h1 class="text">24/7 SERVICES</h1>
