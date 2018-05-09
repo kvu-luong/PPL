@@ -68,7 +68,7 @@
                     <div class="col-xs-6 ">
                         <div class="welcome_contain">
                             <div class="line wow fadeInLeft"  data-wow-delay="1s">
-                                IT'S AN AMAZING SERVICES!
+                                IT'S AMAZING SERVICES!
                             </div>
                             <div class="line1 wow fadeInLeft" data-wow-delay="1.5s">
                                 Welcome To Medical Services You Can Trust
