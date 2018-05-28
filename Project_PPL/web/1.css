@@ -154,3 +154,18 @@ h2.text-center{
     height: 40px;
     line-height: 41px;
 }
+#doctorTable{
+    margin-top:100px;
+}
+#adjustFooter{
+    margin-top: 400px;
+}
+.resetpass{
+    margin-top:200px;
+}
+.goin{
+    margin-top:-25px;
+}
+.doctorProfile{
+    margin-top:200px;
+}

@@ -8,6 +8,26 @@
         <servlet-name>MailServlet</servlet-name>
         <servlet-class>CONTROL.MailServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DoctorServlet</servlet-name>
+        <servlet-class>CONTROL.DoctorServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PatientServlet</servlet-name>
+        <servlet-class>CONTROL.PatientServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>HospitalServlet</servlet-name>
+        <servlet-class>CONTROL.HospitalServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SpecialtyServlet</servlet-name>
+        <servlet-class>CONTROL.SpecialtyServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BookMarkServlet</servlet-name>
+        <servlet-class>CONTROL.BookMarkServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>User</servlet-name>
         <url-pattern>/UserServlet</url-pattern>
@@ -15,6 +35,26 @@
     <servlet-mapping>
         <servlet-name>MailServlet</servlet-name>
         <url-pattern>/MailServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DoctorServlet</servlet-name>
+        <url-pattern>/DoctorServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PatientServlet</servlet-name>
+        <url-pattern>/PatientServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HospitalServlet</servlet-name>
+        <url-pattern>/HospitalServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SpecialtyServlet</servlet-name>
+        <url-pattern>/SpecialtyServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BookMarkServlet</servlet-name>
+        <url-pattern>/BookMarkServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

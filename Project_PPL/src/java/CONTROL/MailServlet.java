@@ -44,11 +44,9 @@ public class MailServlet extends HttpServlet {
             if(checkSendMail){
                 con.saveContactComment(userName, email, comments);
                
-                 request.setAttribute("SendMail","ok");
+                 request.setAttribute("contact","We will reply soon!");
                  response.sendRedirect("index_1.jsp");
             }else{
-                 
-                request.setAttribute("SendMail","no");
                 request.getRequestDispatcher("index_1.jsp").forward(request, response);
             }
         }

@@ -4,7 +4,7 @@ package MODEL;
  *
  * @author PC
  */
-public class User {
+public class Patient {
 
     private int id;
     private String firstName;
@@ -12,33 +12,24 @@ public class User {
     private String gender;
     private String email;
     private String password;
-    private String phone;
     private String address;
     private String language;
-    private String avatar;
-    private String dateOfBirth;
     private String registerDay;
-    private String role;
+    private int status;
 
-    private String status;
-
-    public User() {
+    public Patient() {
     }
 
-    public User(int id, String firstName, String lastName, String gender, String email, String password, String phone, String address, String language, String avatar, String dateOfBirth, String registerDay, String role, String status) {
+    public Patient(int id, String firstName, String lastName, String gender, String email, String password, String address, String language, String registerDay, int status) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
         this.email = email;
         this.password = password;
-        this.phone = phone;
         this.address = address;
         this.language = language;
-        this.avatar = avatar;
-        this.dateOfBirth = dateOfBirth;
         this.registerDay = registerDay;
-        this.role = role;
         this.status = status;
     }
 
@@ -90,14 +81,6 @@ public class User {
         this.password = password;
     }
 
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
     public String getAddress() {
         return address;
     }
@@ -114,22 +97,6 @@ public class User {
         this.language = language;
     }
 
-    public String getAvatar() {
-        return avatar;
-    }
-
-    public void setAvatar(String avatar) {
-        this.avatar = avatar;
-    }
-
-    public String getDateOfBirth() {
-        return dateOfBirth;
-    }
-
-    public void setDateOfBirth(String dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
-
     public String getRegisterDay() {
         return registerDay;
     }
@@ -138,21 +105,15 @@ public class User {
         this.registerDay = registerDay;
     }
 
-    public String getRole() {
-        return role;
-    }
-
-    public void setRole(String role) {
-        this.role = role;
-    }
-
-    public String getStatus() {
+    public int getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(int status) {
         this.status = status;
     }
+
+   
 
   
 }

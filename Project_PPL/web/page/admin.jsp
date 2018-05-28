@@ -4,6 +4,7 @@
     Author     : PC
 --%>
 
+<%@page import="MODEL.Admin"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -48,16 +49,23 @@
                         <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
                     </li>
                     <li class="nav-item d-none d-sm-inline-block">
-                        <a href="index3.html" class="nav-link">Home</a>
+                        <a href="../UserServlet?action=LogoutAdmin" class="nav-link">Log Out</a>
                     </li>
                     <li class="nav-item d-none d-sm-inline-block">
                         <a data-toggle="modal" href='#register-modal'class="nav-link">Register</a>
                     </li>
                     <li class="nav-item d-none d-sm-inline-block">
-                        <a href="#" class="nav-link" >Login</a>
+                       <a class="btn btn-success" data-toggle="modal" href='#logAsAdmin' data-dismiss="modal">
+                           <%if(session.getAttribute("admin")!= null){
+                                   Admin admin = (Admin)session.getAttribute("admin");
+                                   %>
+                                   <%= admin.getFirstName() %>
+                           <%}else{%>
+                           Login
+                           <%}%>
+                       </a></li>
                     </li>
                 </ul>
-
                 <!-- SEARCH FORM -->
                 <form class="form-inline ml-3">
                     <div class="input-group input-group-sm">
@@ -192,32 +200,40 @@
                             <!-- Add icons to the links using the .nav-icon class
                                  with font-awesome or any other icon font library -->
                             <li class="nav-item has-treeview menu-open">
-                                <a href="#" class="nav-link active">
+                                <a href="#" class="nav-link">
                                     <i class="nav-icon fa fa-dashboard"></i>
                                     <p>
-                                        Dashboard
+                                        Manage
                                         <i class="right fa fa-angle-left"></i>
                                     </p>
                                 </a>
                                 <ul class="nav nav-treeview">
+                                   <% if(session.getAttribute("admin") != null){%>
                                     <li class="nav-item">
-                                        <a href="./index.html" class="nav-link active">
+                                        <a href="../patient/allPatient.jsp" class="nav-link active">
                                             <i class="fa fa-circle-o nav-icon"></i>
-                                            <p>Dashboard v1</p>
+                                            <p>Patient</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="./index2.html" class="nav-link">
+                                        <a href="../doctor/doctor.jsp" class="nav-link">
                                             <i class="fa fa-circle-o nav-icon"></i>
-                                            <p>Dashboard v2</p>
+                                            <p>Doctor</p>
                                         </a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a href="./index3.html" class="nav-link">
+                                     <li class="nav-item">
+                                        <a href="../specialty/viewAllSepecialty.jsp" class="nav-link">
                                             <i class="fa fa-circle-o nav-icon"></i>
-                                            <p>Dashboard v3</p>
+                                            <p>Specialty Category</p>
                                         </a>
                                     </li>
+                                     <li class="nav-item">
+                                        <a href="../hospital/viewAllHospitalAdmin.jsp" class="nav-link">
+                                            <i class="fa fa-circle-o nav-icon"></i>
+                                            <p>Hospital</p>
+                                        </a>
+                                    </li>
+                                    <%}%>
                                 </ul>
                             </li>
                             <li class="nav-item">
@@ -1252,5 +1268,6 @@
             </div>
         </div>
         <!-- End modal register -->
+        <jsp:include page="loginAsAdminForm.jsp"></jsp:include>
     </body>
 </html>
